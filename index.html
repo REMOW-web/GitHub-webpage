@@ -9,8 +9,10 @@
 <body>
     <div class="container">
         <h1>GitHub Profile Viewer</h1>
-        <input type="text" id="username" placeholder="Enter GitHub username">
-        <button onclick="fetchGitHubProfile()">Fetch Profile</button>
+        <div class="input-container">
+            <input type="text" id="username" placeholder="Enter GitHub username">
+            <button onclick="fetchGitHubProfile()">Fetch Profile</button>
+        </div>
         <div id="profile"></div>
         <div class="error" id="error"></div>
     </div>
