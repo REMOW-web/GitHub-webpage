@@ -21,8 +21,14 @@ async function fetchGitHubProfile() {
         const data = await response.json();
         profileDiv.innerHTML = `
 
+            
+            <a href="${data.html_url}" class="hover-btn">
+            <div class="tooltip">Go to gitHub profile</div>
+            
             <img src="${data.avatar_url}" alt="${data.login}'s avatar" width="150">
+            </a>
         
+
             <div>
             <h2>${data.name || data.login}</h2> 
             <p><strong>Followers:</strong> ${data.followers}</p>
