@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #ececec, #f5f5f5);
+    background: linear-gradient(to right, #ff66b2, #ffccff); /* Stylish pink background gradient */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,34 +10,44 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #000000; /* Black container */
     padding: 30px 50px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
     text-align: center;
-    border: 2px solid #ff66b2;
+    border: 2px solid #ff66b2; /* Pink border */
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
 h1 {
-    color: #ff66b2;
+    color: #ff66b2; /* Pink text */
+    
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 70%;
     padding: 10px;
-    margin: 15px 0;
+    margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f0f0f0; /* Light background */
+    color: #000000; /* Black text */
 }
 
 button {
-    background-color: #ff66b2;
+    background-color: #ff66b2; /* Pink button */
     color: white;
     padding: 10px 20px;
-    margin: 15px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -54,7 +64,44 @@ button:hover {
     margin-top: 10px;
 }
 
+#profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: #ffffff; /* White text */
+}
+
 #profile img {
     border-radius: 50%;
-    margin-top: 20px;
-    border
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #ff66b2;
+}
+
+.profile-info {
+    flex: 1;
+    text-align: left;
+    color: #ffffff; /* White text */
+}
+
+.profile-info h2 {
+    color: #ff66b2; /* Pink text */
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.profile-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-info li {
+    margin: 10px 0;
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+}
+
+.profile-info li strong {
+    color: #ff66b2; /* Pink text */
+}
