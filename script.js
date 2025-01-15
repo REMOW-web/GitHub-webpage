@@ -20,12 +20,18 @@ async function fetchGitHubProfile() {
 
         const data = await response.json();
         profileDiv.innerHTML = `
-            <h2>${data.name || data.login}</h2>
+
             <img src="${data.avatar_url}" alt="${data.login}'s avatar" width="150">
+        
+            <div>
+            <h2>${data.name || data.login}</h2> 
             <p><strong>Followers:</strong> ${data.followers}</p>
             <p><strong>Following:</strong> ${data.following}</p>
             <p><strong>Public Repos:</strong> ${data.public_repos}</p>
             <p><strong>Bio:</strong> ${data.bio || 'No bio available'}</p>
+            
+            </div>
+            
         `;
     } catch (error) {
         errorDiv.innerHTML = error.message;
