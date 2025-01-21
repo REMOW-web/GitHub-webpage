@@ -2,6 +2,7 @@ async function fetchGitHubProfile() {
     const username = document.getElementById('username').value.trim();
     const profileDiv = document.getElementById('profile');
     const errorDiv = document.getElementById('error');
+    document.getElementById('username').value = '';
     
     // Clear previous data
     profileDiv.innerHTML = '';
